@@ -48,3 +48,5 @@ def main():
         print('INVALID!') #si el retunr da flase entonces es invalido
 
 main() #aqui se manda a traer la funcion main 
+#en github estan subidos estos codigos en otra rama "dev" y estan subidos sin comentarios y con comentarios
+#los comentarios lo puse conforme le fui entendiendo 
