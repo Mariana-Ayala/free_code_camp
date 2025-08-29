@@ -17,7 +17,10 @@ def arithmetic_arranger(problems, show_answers=False ):
                 op=number.split()
                 if op[0].isdigit()==False or op[2].isdigit()==False:
                     return 'Error: Numbers must only contain digits.'
-
+    
+    #que los numeros sean solo de 4 digitos no mas 
+    if len(op[0])>4 or len(op[2])>4:
+                return 'Error: Numbers cannot be more than four digits.'
 
     return problems
 
