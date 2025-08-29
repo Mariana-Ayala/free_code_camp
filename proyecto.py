@@ -5,23 +5,20 @@ def arithmetic_arranger(problems, show_answers=False ):
         return'Error: Too many problems'
 
     #solo se pueden los operandos + y -
-    else:
-        for problem in problems:
-            parts =problem.split()
-            if parts[1] not in ['+','-']:
+    for problem in problems:
+        parts =problem.split()
+        if parts[1] not in ['+','-']:
              return "Error: Operator must be '+' or '-'."
          
-    #los digitos de los problemas deben de ser numeros 
-        else:
-            for number in problems:
-                op=number.split()
-                if op[0].isdigit()==False or op[2].isdigit()==False:
-                    return 'Error: Numbers must only contain digits.'
-    
-    #que los numeros sean solo de 4 digitos no mas 
-    if len(op[0])>4 or len(op[2])>4:
-                return 'Error: Numbers cannot be more than four digits.'
+        #solo permite digitos
+        if parts[0].isdigit()==False or parts[2].isdigit()==False:
+            return 'Error: Numbers must only contain digits.'
+        
+        #maximo 4 digitos
+        if len(parts[0])>4 or len(parts[2])>4:
+            return 'Error: Numbers cannot be more than four digits.'
 
+    #regresa la lista original
     return problems
 
 print(f'\n{arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])}')
