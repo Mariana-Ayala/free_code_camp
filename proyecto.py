@@ -1,13 +1,22 @@
 def arithmetic_arranger(problems, show_answers=False ):
     
+    #deben de ser solo 5 problemas
     if len(problems)>5:
         return'Error: Too many problems'
 
+    #solo se pueden los operandos + y -
     else:
         for problem in problems:
             parts =problem.split()
             if parts[1] not in ['+','-']:
              return "Error: Operator must be '+' or '-'."
+         
+    #los digitos de los problemas deben de ser numeros 
+        else:
+            for number in problems:
+                op=number.split()
+                if op[0].isdigit()==False or op[2].isdigit()==False:
+                    return 'Error: Numbers must only contain digits.'
 
 
     return problems
