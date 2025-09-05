@@ -1,7 +1,7 @@
 def buscar(alum):
     alumnos = {"Antonio":7 , "Federico":6, "Fabiola":9}
     if alum in alumnos:
-        print(f"Su calificacion es: {alumnos[alum]}")
+        print(f"El alumno {alum} tiene como calificacion: {alumnos[alum]}")
     else:
         print("Estudiante no encontrado")
 
