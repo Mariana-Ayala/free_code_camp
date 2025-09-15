@@ -23,7 +23,10 @@ def home():
 })
 
 if __name__ == "__main__":
+
     #name sirve para ver en que modo se ejecutara
+
+
     #si se ejectua de manera directa name=main entonces ejecuta el servidor 
     #si se ejecuta de otra manera name="nombre del modulo" no arrancara el servidor 
 
